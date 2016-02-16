@@ -84,7 +84,7 @@ li:hover {
     -ms-transform: translateX(-380px);
     transform: translateX(-380px);
     transition: transform .3s ease;
-    -khtml-opacity: ;
+    -khtml-opacity: .9;
     opacity: .9;
     -moz-opacity: .9;
     -ms-filter: alpha(opacity=90);
@@ -99,6 +99,8 @@ li:hover {
 }
 
 .open {
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
     transform: translateX(0px);
 }
 
@@ -198,7 +200,10 @@ img {
 
 @media (min-width: 600px) {
     .container {
+        -webkit-transform: translateX(0px);
+        -ms-transform: translateX(0px);
         transform: translateX(0px);
+        transition: transform .3s ease;
     }
 
     a#MenuButton {
