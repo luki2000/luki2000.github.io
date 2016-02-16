@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <!-- Icons on this page made by Robin Kylander http://www.flaticon.com-->
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta charset="utf-8">
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <title>NeighbourHood Project</title>
+</head>
+<body>
+    <a id="MenuButton"><img alt="open menu" id="openMenuIcon" src=
+    "img/menu.png"> <span class="iconText">Menu</span></a> <!--Menu-->
+    <div class="container">
+        <div class="closeButtonSection">
+            <a id="closeButton"><img alt="close menu" id="closeMenuIcon" src=
+            "img/cancel.png"></a>
+        </div><!-- Project Title -->
+        <div class="projectTitleSection">
+            <h2>The NeighbourHood Project</h2>
+        </div><!-- Search input area -->
+        <div class="searchSection">
+            Search: <input data-bind="textInput: query" placeholder=
+            "Search venue name">
+        </div>
+        <div class="searchResultSection">
+            Total venues on the 24/01/2016: <span data-bind=
+            "text: $root.venues().length"></span>
+        </div><!--  View list Section -->
+        <ul class="viewListSection" data-bind="foreach: searchVenue">
+            <li data-bind=
+            "click: $root.targetMarker, css: { 'odd-row': $index() % 2 === 0, 'even-row': $index() % 2 === 1,'highlightVenue': id === $root.selectedVenue()}, attr: { id: id}">
+            <div class="titleSection">
+                    <span data-bind=
+                    "text: ($index() + 1)"></span><span>:</span>
+                    <span data-bind="text: name"></span>
+                </div>
+                <div class="imagePlaceHolderSection"><img class="image"
+                data-bind="attr: {src: imgSrc, alt: name}"></div>
+                <div class="ratingSection">
+                    <div class="score" data-bind=
+                    "style: {background: ratingColor}">
+                        <span data-bind="text: rating"></span>
+                    </div>
+                </div>
+                <div class="addressSection">
+                    <span class="formattedAddress" data-bind=
+                    " text: address"></span>
+                </div>
+                <div class="detailsSection">
+                    <ul>
+                        <li><img alt="label" src=
+                        "img/label.png"><span data-bind=
+                        "text: category"></span></li>
+                        <li><img alt="picture of globe" src="img/web.png">
+                        <span data-bind="text: websiteUrl"></span></li>
+                        <li><img alt="phone" src=
+                        "img/telephone.png"><span data-bind=
+                        "text: phoneNumber"></span></li>
+                        <li><img alt="user" src="img/user.png">
+                        <span data-bind="text: comment" class="comment"></span></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div><!-- The map -->
+    <div id="map"></div>
+    <script async defer src=
+    "https://maps.googleapis.com/maps/api/js?key=AIzaSyAwAz5yFZkU6Or3VDGby7pCMkRB8lccde8&callback=initMap"  onerror="googleError()">
+    </script>
+    <script src="js/lib/jquery.js">
+    </script>
+    <script src="js/lib/knockout-3.4.0.js">
+    </script>
+    <script src="js/app.js">
+    </script>
+    <!-- This script is really only for interactivity like opening & closing menu-->
+    <script src="js/main.js">
+    </script>
+</body>
+</html>

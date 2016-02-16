@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/bootstrap.min.js"> </script>
+  <title>A Samurai's Portfolio</title>
+  <link href="http://fonts.googleapis.com/css?family=Walter+Turncoat:100,300" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <article class="container">
+    <header class="row">
+      <div class="col-md-6 title-logo">
+        <img src="image/logo.png" alt="logo">
+      </div>
+      <div class="col-md-6 text-right text-uppercase">
+        <h1 class="text-thin title-super">Lukindo Mbuli</h1>
+        <h4>Front-End Samurai</h4>
+      </div>
+    </header>
+    <div class="row">
+      <div class="col-md-12">
+        <hr>
+      </div>
+    </div>
+    <section class="row">		
+      <div class="col-md-12">
+        <img srcset="image/samurai.jpg 1140w, image/samurai-small.jpg 570w" sizes="(min-width: 992px) 100vw" src="image/samurai-small.jpg" class="img-responsive img-content" alt="Samurai Facing Battle"/>
+      </div>
+    </section>
+    <header class="row">
+      <div class="col-md-12">
+      <h2 class="text-muted">Featured Work</h2>
+      </div>
+    </header>
+    <section class="row text-center">		
+      <div class="col-md-4">
+        <img class="img-responsive img-content img-project" srcset="image/garden.jpg 864w, image/garden-small.jpg 432w" sizes="(min-width: 992px) 100vw, 33.33vw" src="image/garden-small.jpg" alt="Japanese Flowers" data-toggle="modal" data-target="#modal-1">
+        <h3 class="text-uppercase">Japanese Botany</h3>
+        <a href="#">http://www.botany.com</a>
+      </div>
+      <div class="col-md-4">
+        <img class="img-responsive img-content img-project" srcset="image/weapons.jpg 864w, weapons-small.jpg 432w" sizes="(min-width: 992px) 100vw, 33.33vw" src="image/weapons-small.jpg" alt="Various Samurai Swords" data-toggle="modal" data-target="#modal-1"> 
+        <h3 class="text-uppercase">Samurai Weapons</h3>
+        <a href="#">http://www.weapons.com</a>	
+      </div>
+      <div class="col-md-4">
+        <img class="img-responsive img-content img-project" srcset="image/ronin.jpg 864w, image/ronin-small.jpg 432w" sizes="(min-width: 992px) 100vw, 33.33vw" src="image/ronin-small.jpg" alt="Ronin & his horse by a lake" data-toggle="modal" data-target="#modal-1"> 
+        <h3 class="text-uppercase">Ronin Survival Guide</h3>
+        <a href="#">http://www.ronin.com</a> 	
+      </div>
+    </section>
+  </article>
+  <div class="modal fade" id="modal-1" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close pull-right" data-dismiss="modal" type=
+          "button"><span>&times;</span></button>
+          <h4 class="modal-title">Japanese Botany</h4>
+        </div>
+        <div class="modal-body">
+          <p>A Plethora of japenese plant seeds which served to create
+          wonderful gardens in the past, you can show off to your neighbours
+          with your very own accurate japenese Garden!!!</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default" data-dismiss="modal" type=
+          "button">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 2 -->
+  <div class="modal fade" id="modal-2" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close pull-right" data-dismiss="modal" type=
+          "button"><span>&times;</span></button>
+          <h4 class="modal-title">Samurai Weapons</h4>
+        </div>
+        <div class="modal-body">
+          <p>Get to know what the real Samurai wielded as a weapon in the name
+          of the Shogunate. Seperate fact from fiction by understanding what
+          exactly a Samurai needed to efficiently fight and protect their
+          duty.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default" data-dismiss="modal" type=
+          "button">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 3 -->
+  <div class="modal fade" id="modal-3" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close pull-right" data-dismiss="modal" type=
+          "button"><span>&times;</span></button>
+          <h4 class="modal-title">Ronin Survival Guide</h4>
+        </div>
+        <div class="modal-body">
+          <p>More in depth detail on how a Ronin survived during the peace and
+          war times. The basic essentials were not so easy to come by.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default" data-dismiss="modal" type=
+          "button">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

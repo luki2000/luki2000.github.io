@@ -1,0 +1,232 @@
+html,body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: cursive;
+    letter-spacing: 2px;
+}
+
+#map {
+    height: 100%;
+}
+
+#closeMenuIcon {
+    min-width: 24px;
+    max-height: 24px;
+}
+
+#openMenuIcon {
+    max-width: 32px;
+    max-height: 32px;
+}
+
+.iconText {
+    font-size: 32px;
+    font-weight: 700;
+    vertical-align: text-bottom;
+}
+
+a,button {
+    min-width: 48px;
+    min-height: 48px;
+}
+
+#MenuButton {
+    z-index: 1;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+#closeButton {
+    float: right;
+    position:relative;
+    left:15px;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -msbox-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul,li {
+    list-style: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+
+.odd-rown {
+    background-color: #fff;
+}
+
+.even-row {
+    background-color: #D3D3D3;
+}
+
+li:hover {
+    background-color: #939393;
+}
+
+.highlightVenue {
+    background-color: #939393;
+}
+
+.container {
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    max-width: 380px;
+    -webkit-transform: translateX(-380px);
+    -ms-transform: translateX(-380px);
+    transform: translateX(-380px);
+    transition: transform .3s ease;
+    -khtml-opacity: ;
+    opacity: .9;
+    -moz-opacity: .9;
+    -ms-filter: alpha(opacity=90);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+    filter: alpha(opacity=90);
+    box-shadow: 3px 3px 2px #000;
+/* Thanks tp PeterSchmalfedt for the carbon fiber css color combo
+        http://lea.verou.me/css3Patterns*/
+    background: linear-gradient(27deg,#151515 5px,transparent 5px) 0 5px,linear-gradient(207deg,#151515 5px,transparent 5px) 10px 0px,linear-gradient(27deg,#222 5px,transparent 5px) 0 10px,linear-gradient(207deg,#222 5px,transparent 5px) 10px 5px,linear-gradient(90deg,#1b1b1b 10px,transparent 10px),linear-gradient(#1d1d1d 25%,#1a1a1a 25%,#1a1a1a 50%,transparent 50%,transparent 75%,#242424 75%,#242424) #000;
+    background-color: #131313;
+    background-size: 20px 20px;
+}
+
+.open {
+    transform: translateX(0px);
+}
+
+.closeButtonSection {
+    width: 100%;
+    height: 25px;
+    padding: 10px;
+}
+
+.projectTitleSection {
+    width: 100%;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+}
+
+.searchSection {
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    padding: 5px;
+}
+
+.searchResultSection {
+    width: 100%;
+    height: 42px;
+    color: #fff;
+    bottom-margin: 10px;
+}
+
+.viewListSection {
+    background-color: #fff;
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.titleSection {
+    height: 50px;
+    width: 100%;
+    float: left;
+}
+
+.imagePlaceHolderSection {
+    height: 120px;
+    width: 30%;
+    float: left;
+}
+
+.image {
+    width: 90%;
+    height: auto;
+}
+
+img {
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.ratingSection {
+    height: 60px;
+    width: 70%;
+    float: left;
+}
+
+.score {
+    width: 90px;
+    font-size: 35px;
+    padding: 3px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    float: right;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.addressSection {
+    height: 60px;
+    width: 70%;
+    float: left;
+}
+
+.formattedAdress {
+    width: 15px;
+}
+
+.detailsSection {
+    width: 100%;
+}
+
+.comment {
+    font-size:14px;
+}
+
+@media (min-width: 600px) {
+    .container {
+        transform: translateX(0px);
+    }
+
+    a#MenuButton {
+        display: none;
+    }
+
+    a#closeButton {
+        display: none;
+    }
+}
+
+/* We add a webkit code to the scroll bar, even
+if it doesn't work on some browsers it should
+nothave any detrimental effect to the UI as it
+will fall back to the standard scrolling UI
+*/
+.viewListSection::-webkit-scrollbar {
+    width: 13px;
+}
+
+.viewListSection::-webkit-scrollbar-track {
+    background-color: red;
+}
+
+.viewListSection::-webkit-scrollbar-thumb {
+    background-color: #ffd700;
+}
+
+.viewListSection::-webkit-scrollbar-thumb:hover {
+    background-color: #b29600;
+}

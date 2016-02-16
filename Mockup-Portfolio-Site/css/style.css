@@ -1,0 +1,100 @@
+body {
+    font-family: "Walter Turncoat", cursive;
+    color: #747704;
+    font-weight: 300;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+}
+
+nav,
+a,
+button {
+    min-width: 40px;
+    min-height: 40px;
+}
+
+.icon {
+    float: left;
+    border: none;
+}
+
+.text-muted {
+    color: #bcbbbb;
+}
+
+.text-thin {
+    font-weight: 100;
+}
+
+.title-super {
+    font-size: 60px;
+}
+
+.title-logo {
+    margin-top: 20px;
+}
+
+.img-content {
+    margin: 10px auto;
+    border: 2px solid #747704;
+    border-radius: 25px;
+    box-shadow: 1px 1px 1px #888;
+}
+
+.img-project {
+    box-shadow: 3px 3px 1px #888;
+    cursor: pointer;
+}
+
+.img-project:hover {
+    -ms-transform: rotate(5deg);
+/* IE 9 */
+    -webkit-transform: rotate(5deg);
+/* Safari */
+    transform: rotate(5deg);
+    transition: 1.5s;
+    -webkit-backface-visibility: hidden;
+/* fix for chrome to prevent the border from having a jagged at the end of the transform */
+}
+
+.img-project:not(:hover) {
+    -ms-transform: rotate(0deg);
+/* IE 9 */
+    -webkit-transform: rotate(0deg);
+/* Safari */
+    transform: rotate(0deg);
+    transition: 1.5s;
+}
+
+hr {
+    border: 2px inset #747704;
+}
+
+/* Project images get too large in one column, this reduces their size */
+@media screen and (max-width:992px) {
+    .img-project {
+        width: 50%;
+        margin: 25px auto;
+    }
+}
+
+/* align Featured Work title to the center */
+@media screen and (max-width:993px) {
+    h2 {
+        text-align: center;
+    }
+}
+
+/*tweeting fon-size that seem to over dominate the page */
+@media screen and (max-width:590px) {
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: .75em;
+    }
+}
