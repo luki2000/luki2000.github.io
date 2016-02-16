@@ -1,4 +1,4 @@
-"use strict";
+//"use strict";
 //Here we build the url link necessary
 //to retrieve our JSON raw data from foursquare.
 //Essentially we will use our data not only for our view list of locations
