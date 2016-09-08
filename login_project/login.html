@@ -90,12 +90,6 @@
 </script>
 
 
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
 
 <!--
   Below we include the Login Button social plugin. This button uses
@@ -103,8 +97,7 @@
   the FB.login() function when clicked.
 -->
 
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
+<div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="true" data-auto-logout-link="true"></div>
 
 <div id="status">
 </div>
